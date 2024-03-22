@@ -21,3 +21,13 @@ Full-Stack Project (Frontend - Using React.js) || (Backend - Using Node.js & Mon
 >> PlayFilters           Filters.Components.js
 >> Posters               Posters.Components.js
 >> PosterSliders         Postersliders.Components.js
+
+# API Key
+>> 837d3932ef21e9e180806f9400c7ffe0
+
+# API Example to JSON View
+>> https://api.themoviedb.org/3/movie/550?api_key=837d3932ef21e9e180806f9400c7ffe0
+
+# GET Popular on Recommended Movies
+>> https://api.themoviedb.org/3/movie/top_rated?api_key=837d3932ef21e9e180806f9400c7ffe0 
+

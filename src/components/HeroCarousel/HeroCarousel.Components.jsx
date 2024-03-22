@@ -4,8 +4,8 @@ import HeroSlider from 'react-slick'
 import { NextArrow, PrevArrow } from './Arrow.Component';
 
 const HeroCarousel = () => {
-  // setImages
-  const [images] = useState([ 
+  
+  const [images,setImages] = useState([ 
     {
       adult: false,
       backdrop_path: "/ugS5FVfCI3RV0ZwZtBV3HAV75OX.jpg", //
@@ -73,10 +73,10 @@ const HeroCarousel = () => {
     <>
     <div className='lg:hidden'>
     <HeroSlider {...settings}>
-    {images.map((image) => (
-      <div className='w-full h-86 md:h-80 py-3'> 
-      {/* ${images.backdrop_path} */}
-        <img src={`https://gos3.ibcdn.com/bms-lp-1516256333.gif`} alt="HeroBanner" className='w-full h-full rounded-md object-cover'/>
+    {images.map((image,index) => (
+      <div className='w-full h-86 md:h-80 py-3' key={index}> 
+      {/* ${images.backdrop_path} ``https://image.tmdb.org/t/p/original${images.poster_path}`` */}
+      <img src={`https://gos3.ibcdn.com/bms-lp-1516256333.gif`} alt="HeroBanner" className='w-full h-full rounded-md object-cover'/>
       </div>
     ))}
     </HeroSlider>
@@ -84,8 +84,8 @@ const HeroCarousel = () => {
 
     <div className='lg:block'>
     <HeroSlider {...settingsLG} >
-     {images.map((image) => (      
-        <div className='w-full h-96 md:h-80 py-3'>
+     {images.map((image,index) => (      
+        <div className='w-full h-96 md:h-80 py-3' key={index}>
         <img src={`https://gos3.ibcdn.com/bms-lp-1516256333.gif`} alt="HeroBanner" className='w-full h-full rounded-md object-cover'/>
       </div>
     ))}
